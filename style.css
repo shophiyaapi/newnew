@@ -1,0 +1,68 @@
+cd Newapp
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background-color: #ffc0cb;
+}
+.container{
+    text-align: center;
+ 
+    
+    
+}
+.teddy {
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.bulb{
+    width: 80px;
+    height: 120px;
+    background-color: gray;
+    border-radius: 50% 50% 0 0;
+    margin-bottom: 20px;
+}
+.teddy img{
+    width: 200px;
+    height: 200px;
+    animation: teddyAnimation 2s infinite;
+    
+}
+.teddy h2{
+    padding: 10px;
+}
+
+
+.btnYes{
+    padding: 10px;
+    color: red;
+    border-radius: 5px;
+    border: 1px solid #ff0062;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    margin-left: -60px;
+
+}
+.btnNo{
+    padding: 10px;
+    color: red;
+    border-radius: 5px;
+    border: 1px solid #ff0062;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s ease;
+    position: absolute;
+    box-shadow: #ff0062;
+    
+    
+}
+
