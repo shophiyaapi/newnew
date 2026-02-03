@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
     moveNoButton();
   });
+  button.addEventListener('click', () => {clickSound.play();
+  });
 
   btnYes.addEventListener("click", function () {
     if (isFirstTimeClicked) {
@@ -53,7 +55,5 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       yes2Handler();
     }
-    button.addEventListener('click', () => {clickSound.play();
-  });
   });
 });
