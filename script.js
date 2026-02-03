@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnYes = document.querySelector(".btnYes");
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
+  const clickSound = new Audio('TWICE What is Love_ MV.mp3');
 
   let isFirstTimeClicked = true;
 
@@ -52,5 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       yes2Handler();
     }
+    button.addEventListener('click', () => {clickSound.play();
+  });
   });
 });
