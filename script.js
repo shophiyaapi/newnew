@@ -2,7 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnYes = document.querySelector(".btnYes");
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
-  const clickSound = new Audio('shophiyaapi/newnew/TWICE What is Love_ MV.mp3');
+  const clickSound = new Audio('shophiyaapi/newnew/TWICE_What_is_Love_MV.mp3');
+clickSound.preload = "auto";
+clickSound.volume = 0.7;
+
+btnYes.addEventListener('click', () => {
+  clickSound.currentTime = 0;   // restart every click
+  clickSound.play().catch(err => {
+    console.log("Audio blocked:", err);
+  });
+});
 
   let isFirstTimeClicked = true;
 
@@ -45,9 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
   btnNo.addEventListener("touchstart", function (event) {
     event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
     moveNoButton();
-  });
-  btnYes.addEventListener('click', () => {
-    clickSound.play();
   });
 
   btnYes.addEventListener("click", function () {
