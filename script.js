@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   const btnYes = document.querySelector(".btnYes");
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
-  const clickSound = new Audio('shophiyaapi/newnew/TWICE_What_is_Love_MV.mp3');
-clickSound.preload = "auto";
-clickSound.volume = 0.7;
 
-btnYes.addEventListener('click', () => {
-  clickSound.currentTime = 0;   // restart every click
-  clickSound.play().catch(err => {
-    console.log("Audio blocked:", err);
-  });
-});
+  const clickSound = new Audio('shophiyaapi/newnew/TWICE_What_is_Love_MV.mp3');
+  clickSound.preload = "auto";
+  clickSound.volume = 0.7;
 
   let isFirstTimeClicked = true;
 
@@ -43,24 +38,27 @@ btnYes.addEventListener('click', () => {
     btnNo.style.display = "none";
   }
 
-  btnNo.addEventListener("click", function () {
+  btnNo.addEventListener("click", moveNoButton);
+  btnNo.addEventListener("mouseover", moveNoButton);
+  btnNo.addEventListener("touchstart", function (e) {
+    e.preventDefault();
     moveNoButton();
   });
 
-  btnNo.addEventListener("mouseover", function () {
-    moveNoButton();
-  });
-
-  btnNo.addEventListener("touchstart", function (event) {
-    event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
-    moveNoButton();
-  });
-
+  // ✅ SINGLE CLICK HANDLER
   btnYes.addEventListener("click", function () {
+
+    clickSound.currentTime = 0;
+    clickSound.play().catch(err => {
+      console.log("Audio blocked:", err);
+    });
+
     if (isFirstTimeClicked) {
       yesHandler();
     } else {
       yes2Handler();
     }
+
   });
+
 });
