@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnYes = document.querySelector(".btnYes");
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
-  const clickSound = new Audio('TWICE What is Love_ MV.mp3');
+  const clickSound = new Audio('C:\Users\Dell\Downloads\TWICE What is Love_ MV.mp3');
 
   let isFirstTimeClicked = true;
 
@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
     moveNoButton();
   });
-  btnYes.addEventListener('click', () => {clickSound.play();
+  btnYes.addEventListener('click', () => {
+    clickSound.play();
   });
 
   btnYes.addEventListener("click", function () {
