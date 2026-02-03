@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
     moveNoButton();
   });
-  button.addEventListener('click', () => {clickSound.play();
+  btnYes.addEventListener('click', () => {clickSound.play();
   });
 
   btnYes.addEventListener("click", function () {
