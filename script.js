@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
 
-  const clickSound = new Audio('shophiyaapi/newnew/TWICE_What_is_Love_MV.mp3');
+  const clickSound = new Audio('shophiyaapi/newnew/TWICE What is Love_MV.mp3');
   clickSound.preload = "auto";
   clickSound.volume = 0.7;
 
