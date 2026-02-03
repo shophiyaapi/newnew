@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnYes = document.querySelector(".btnYes");
   const btnNo = document.querySelector(".btnNo");
   const text = document.getElementById("text");
-  const clickSound = new Audio('C:\Users\Dell\Downloads\TWICE What is Love_ MV.mp3');
+  const clickSound = new Audio('shophiyaapi/newnew/TWICE What is Love_ MV.mp3');
 
   let isFirstTimeClicked = true;
 
